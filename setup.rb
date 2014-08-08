@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'pry'
 
 # The code below will automatically require all the gems listed in our Gemfile,
 # so we don't have to manually require gems a la
