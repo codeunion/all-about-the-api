@@ -5,6 +5,8 @@ require './setup'
 # database.rb is where we're defining our DataMapper models
 require './database'
 
+SPOTIFY = 'https://api.spotify.com/v1'
+
 def twitter_client
   return @client unless @client.nil?
 
@@ -13,5 +15,12 @@ def twitter_client
     config.consumer_secret     = ENV['TWITTER_CONSUMER_SECRET']
     config.access_token        = ENV['TWITTER_ACCESS_TOKEN']
     config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
+  end
+end
+
+get("/album") do
+  if params[:name]
+    spotify_query_url = URI.encode("#{SPOTIFY}/search?q=#{params[:name]}&type=album") 
+    Excon.get(spotify_query_url).body
   end
 end

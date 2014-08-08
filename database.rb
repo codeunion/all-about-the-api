@@ -1,7 +1,7 @@
 # We point DataMapper to the correct database in setup.rb
 require './setup'
 
-# class TweetReport
+# class Report
 #   include DataMapper::Resource
 # end
 

@@ -1,11 +1,16 @@
-### Tweetalyzer  
+### All About The API  
 
+We are going to `GET` the entire internet :japanse_ogre:
 
-Learn how to turn return values from the Twitter API into relevant metrics and actionable data.
 
 To get this application running.
 
 1. Fork and Clone this repository.
+
+  ```shell
+    git clone
+  ```
+
 
 1. Install any relevant gems.
 
@@ -41,3 +46,10 @@ rackup
 
 - http://www.sinatrarb.com/
 - https://dev.twitter.com/
+
+### API's under question
+
+- https://www.mashape.com/
+
+
+build johnify a spotify clone, can I actually stream music from inside my web page? 

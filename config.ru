@@ -1,3 +1,3 @@
-require './tweetalyzer'
+require './app'
 
 run Sinatra::Application
