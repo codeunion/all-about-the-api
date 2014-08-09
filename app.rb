@@ -11,7 +11,7 @@ SPOTIFY = 'https://api.spotify.com/v1'
 get("/music/album") do
   if params[:name]
     url = spotify_url(params[:name], 'album')
-    Excon.get(spotify_query_url).body
+    Excon.get(url).body
   else
     try_again
   end
@@ -20,7 +20,7 @@ end
 get("/music/artist") do
   if params[:name]
     url = spotify_url(params[:name], 'artist')
-    Excon.get(spotify_query_url).body
+    Excon.get(url).body
   else
     try_again
   end
@@ -29,7 +29,7 @@ end
 get("/music/track") do
   if params[:name]
     url = spotify_url(params[:name], 'track')
-    Excon.get(spotify_query_url).body
+    Excon.get(url).body
   else
     try_again
   end
