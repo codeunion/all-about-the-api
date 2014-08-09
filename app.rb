@@ -7,6 +7,9 @@ require './database'
 
 SPOTIFY = 'https://api.spotify.com/v1'
 
+get("/") do
+ erb :root
+end
 
 get("/music/album") do
   if params[:name]
@@ -58,7 +61,7 @@ def get_tweets(hashtag)
 end
 
 def spotify_url(query, type)
-  URI.encode("#{SPOTIFY}/search?q=#{query}&type=#{type}") 
+  URI.encode("#{SPOTIFY}/search?q=#{query}&type=#{type}")
 end
 
 def try_again
